@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://785wav4h6fst"]
+
+[ext_resource type="Texture2D" uid="uid://bko56bfeknk6p" path="res://assets/Small-8-Direction-Characters_by_AxulArt.png" id="1_jf557"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnt8i"]
+size = Vector2(50, 58)
+
+[node name="NPC" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(29.25, 38.5)
+scale = Vector2(3.71875, 3.13636)
+texture = ExtResource("1_jf557")
+hframes = 8
+vframes = 12
+frame = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(28, 36)
+shape = SubResource("RectangleShape2D_rnt8i")
